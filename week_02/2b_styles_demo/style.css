@@ -1,0 +1,48 @@
+/* 
+    ℹ️ CSS Rule syntax: selector { property: value; }
+*/
+
+
+body{
+
+  /* Step 1: Set the image path (relative or absolute URL) */
+  background-image: url('leaf.gif'); 
+
+  /* Step 2: Prevent the image from tiling/repeating */
+  background-repeat: repeat; 
+
+    /* ℹ️ rgb(r, g, b) color: Red, green, and blue values from 0 to 255. Here, a deep dark red. */
+    background-color: rgb(71, 11, 11);
+    
+    /* ℹ️ Named Color: Standard descriptive color keywords like 'ivory', 'pink', 'black'. */
+    color: ivory;
+}
+
+h1{
+    font-size:xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:aquamarine;
+    text-align: center;
+}
+
+h3{
+    /* 💡 Tip: Borders are defined as 'width style color'. This uses rgb() for a bright green. */
+    border: 2px solid rgb(54, 215, 54);
+    
+    /* ℹ️ Padding: Space inside the element's border. '10px' is top/bottom, '20px' is left/right. */
+    padding: 10px 20px;
+    background-color: pink;
+    
+    /* 💡 Tip: 'margin: 20px auto' centers a block-level element horizontally with automatic side spacing! */
+    margin: 20px auto;
+    width: 50%;
+    color:black;
+}
+
+div{
+    /* ℹ️ rgba(r, g, b, alpha): The 'a' stands for Alpha (opacity) between 0.0 (transparent) and 1.0 (opaque). */
+    background-color: rgba(20, 17, 17, .9);
+}
+/* 
+    🆘 I need help here
+*/

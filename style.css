@@ -5,4 +5,20 @@ body{
 details{
     background-color: bisque;
     color:darkslategray;
+    width: 80%;
+    font-size: large;
+    margin: 20px;
+    min-height: 30px;
+}
+
+img{
+    float: right;
+    background: black;
+    padding: 20px;
+    width: 15%;
+}
+
+a{
+    color:darkslategray;
+    margin-left: 40px;
 }

@@ -21,7 +21,7 @@ body{
 h1{
     font-size:xx-large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:aquamarine;
+    color: aquamarine;
     text-align: center;
 }
 
@@ -36,13 +36,19 @@ h3{
     /* 💡 Tip: 'margin: 20px auto' centers a block-level element horizontally with automatic side spacing! */
     margin: 20px auto;
     width: 50%;
-    color:black;
+    color: black;
 }
 
 div{
     /* ℹ️ rgba(r, g, b, alpha): The 'a' stands for Alpha (opacity) between 0.0 (transparent) and 1.0 (opaque). */
     background-color: rgba(20, 17, 17, .9);
 }
-/* 
-    🆘 I need help here
-*/
+
+
+.author{
+    color: green;
+    font-family: arial, helvetica, sans-serif;
+    font-size: large;
+    margin-left: 60px;
+    font-style: italic;
+}

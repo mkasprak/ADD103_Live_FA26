@@ -7,10 +7,11 @@
     <title>Tables</title>
 </head>
 <body>
-    <!-- 🕸️  (tr>td*5)*5 -->
+       <!-- 🧱 A table is built from rows (tr) and cells (th or td). -->
      <table>
-        <!-- 👨‍🦽‍➡️needs a caption -->
+          <!-- 🏷️ A caption names the table and improves context for readers. -->
          <caption>Table Demo</caption>
+          <!-- 🔝 Header cells describe the columns; scope connects each header to its column. -->
          <tr>
             <th scope="col">col 1</th>
             <th scope="col">col 2</th>
@@ -18,15 +19,17 @@
             <th scope="col">col 4</th>
             <th scope="col">col 5</th>
          </tr>
+         <!-- 📏 colspan makes this cell span three columns. -->
          <tr>
             <td>1</td>
-            <td colspan = 3>1</td>
+            <td colspan="3">1</td>
             <td></td>
          </tr>
+         <!-- 📐 rowspan makes this cell span two rows. -->
          <tr>
             <td></td>
             <td>1</td>
-            <td rowspan = 2></td>
+            <td rowspan="2"></td>
             <td></td>
             <td></td>
          </tr>

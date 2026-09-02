@@ -1,8 +1,10 @@
+/* 🎨 Set the page-wide colors. */
 body{
     background-color: rgb(33, 3, 3);
     color: ivory;
 }
 
+/* 📦 Group each list in a centered, bordered content area. */
 .container{
     width: 60%;
     margin: 20px auto;
@@ -12,14 +14,17 @@ body{
     padding: 20px;
 }
 
+/* 1️⃣ Change the marker style for the main ordered list. */
 ol{
 
 }
 
+/* 🔤 Nested ordered lists get a different marker style. */
 ol li{
 
 }
 
+/* 🧭 Center the page heading. */
 h1{
     text-align: center;
 }

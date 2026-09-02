@@ -1,8 +1,10 @@
+/* 🎨 Set the shared page colors for the table demonstration. */
 body{
-    background-color: rgb(33, 3, 3);
-    color: ivory;
+    background-color:Whitesmoke;
+    color: rgb(41, 5, 41);
 }
 
+/* 📦 This rule is available for wrapping table content in a panel. */
 .container{
     width: 60%;
     margin: 20px auto;
@@ -11,24 +13,44 @@ body{
     color: rgb(33,3,3);
     padding: 20px;
 }
-
-ol{
-    list-style-type:lower-roman;
-
+caption{
+    color:rgb(41, 5, 41);
+    font-size:x-large;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-ol ol{
-    list-style-type:lower-alpha;
+/* 🧮 Give the table a predictable width and center it on the page. */
+table{
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color:whitesmoke;
+    color: rgb(41, 5, 41);
 }
 
-ol li{
-
+/* 🏷️ Header cells identify the columns and receive stronger emphasis. */
+th, .birthday{
+    border: 2px solid whitesmoke;
+    background-color: rgb(41, 5, 41);
+    padding: 20px;
+    font-size:larger;
+    color: whitesmoke;
 }
 
+/* 🔲 Borders and padding make each data cell easy to scan. */
+td{
+    border: 1px solid rgb(41, 5, 41);
+    padding: 10px;
+    text-align: right;
+    vertical-align: top;
+    height: 80px;
+}
+
+
+
+/* 🧭 Center the page heading when one is added. */
 h1{
     text-align: center;
+    color: ivory;
 }
 
-ul{
-    list-style-type:disc;
-}

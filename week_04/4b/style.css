@@ -1,15 +1,15 @@
 
+/* 🎨 Variables make colors easy to reuse. */
 :root{
     --background: rgb(42, 7, 124);
     --text: rgb(237, 211, 211);
 }
 
-
-
 body{
     background-color: var(--text);
 }
 
+/* 🏷️ Header styling creates the masthead band. */
 header{
     background-color:var(--background);
     min-height: 100px;
@@ -35,6 +35,7 @@ header h1{
     padding-top: 30px;
 }
 
+/* 📝 main is the wider content area. */
 main{
     background-color:var(--background);
     min-height: 200px;
@@ -43,6 +44,7 @@ main{
     margin: 20px 2.5% 20px 2.5%;
 }
 
+/* 📌 aside is the narrower side section. */
 aside{
     background-color: var(--background);
     width: 20%;
@@ -50,6 +52,8 @@ aside{
     float: right;
     margin: 20px 2.5% 20px 2.5%;
 }
+
+/* 👣 footer sits under the main layout. */
 footer{
     background:var(--background);
     color: var(--text);
@@ -57,6 +61,7 @@ footer{
     clear:both;
 }
 
+/* 🧱 container controls the overall page width. */
 .container{
     width: 80%;
     max-width: 1200px;

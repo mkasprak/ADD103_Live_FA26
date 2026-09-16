@@ -1,9 +1,10 @@
 body{
+    /* 🌾 Background color sets the page theme. */
     background-color: rgb(138, 100, 3);
 }
 
-
 .container{
+    /* 📦 The container groups content into a centered block. */
     width: 75%;
     background-color: black;
     border: 2px solid ivory;
@@ -15,10 +16,9 @@ body{
     font-size:x-large;
     border-radius: 20px;
     overflow:auto;
-    /* auto centers things */
 }
 
-/* styles all images inside of containers */
+/* 🖼️ This styles every image inside a container. */
 .container img{
     width: 20%;
     margin: 20px;
@@ -28,6 +28,7 @@ body{
 }
 
 .left{
+    /* 📍 float places the image to the left of the text. */
     clear:both;
     float:left;
 }

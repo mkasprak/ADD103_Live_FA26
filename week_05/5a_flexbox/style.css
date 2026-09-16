@@ -4,24 +4,24 @@
   for effects
 */
 
-/* 🛠️ The universal selector targets every element. box-sizing: border-box keeps padding inside our width math. */
+/* 🛠️ box-sizing keeps padding inside the width calculation. */
 *{
   box-sizing: border-box;
 }
 
-/* 🎨 CSS variables store reusable values like colors so we only have to update them in one place! */
+/* 🎨 CSS variables store colors in one place. */
 :root{
   --primary-dark: rgb(14, 23, 23);
   --accent:rgb(42,5,96);
   --primary-light: rgb(184, 185, 181);
 }
 
-/* 🖥️ Style the body tag to set page-wide default colors and background. */
+/* 🖥️ The body sets the page background color. */
 body{
   background-color:var(--primary-dark);
 }
 
-/* 📦 Set display: flex on the parent container to organize the elements inside. */
+/* 📦 display: flex turns this into a flex container. */
 .flexbox-container {
   display: flex;
   justify-content: space-around;
@@ -29,7 +29,7 @@ body{
   align-content: center;
 }
 
-/* 🧩 Target all div children inside the flexbox container to style them uniformly. */
+/* 🧩 These are the flex items. Margin and padding create space between them. */
 .flexbox-container div {
   background-color: var(--primary-light);
   margin: 10px;
@@ -38,7 +38,7 @@ body{
   flex-wrap:wrap;
 }
 
-/* 📇 Style the card layout with dimensions, colors, and rounded corners. */
+/* 📇 Cards get width, color, and rounded corners. */
 .card {
   background:var(--primary-dark);
   color: var(--primary-light);
@@ -48,13 +48,13 @@ body{
   border-radius: 20px;
 }
 
-/* 📝 Center and color headings inside the card. */
+/* 📝 Center the text inside each card heading. */
 .card h2{
   text-align: center;
   color: var(--accent);
 }
 
-/* 🖼️ Resize, center, and add shadows to our card images using block display. */
+/* 🖼️ Images are sized and centered inside each card. */
 .card img{
   width: 80%;
   display: block;
@@ -64,7 +64,7 @@ body{
 }
 
 
-/* 🏷️ Style the page title heading to stand out. */
+/* 🏷️ The main heading is centered and easy to read. */
 h1{
   color:var(--primary-light);
   text-align: center;

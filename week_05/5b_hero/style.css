@@ -1,10 +1,16 @@
+/*
+  🧠 Flexbox practice.
+  The comments stay short and focus on the key layout idea.
+*/
 
+/* 🛠️ box-sizing keeps padding inside the width calculation. */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* 🎨 CSS variables store colors in one place. */
 :root{
     --dark:#562a1f;
     --accent: #5467bc;
@@ -13,6 +19,7 @@
     --light: #f4e3c3;
 }
 
+/* 📦 display: flex turns the hero into a flex row. */
 .hero{
     display: flex;
     align-items: center;
@@ -20,6 +27,7 @@
     min-height: 400px;
 }
 
+/* 🧩 These are the two hero flex items. flex-basis sets their starting width. */
 .hero-text, .hero-image{
     flex-basis: 50%;
     flex-grow: 1;
@@ -28,50 +36,55 @@
     background: rgba(0,0,0,0);
 }
 
+/* 📌 aside is the narrower flex item in the content row. */
 aside{
     flex-basis:20%;
     flex-grow:1;
     padding: 20px;
 }
 
+/* 📝 main takes most of the row and grows to fill extra space. */
 main{
     flex-basis: 75%;
     flex-grow:1;
     padding:20px;
     margin-right: 5%;
 }
+
+/* 🖼️ The hero image gets width and rounded corners for the banner look. */
 .hero-image img{
     width: 90%;
     margin: 10px auto;
     padding: 20px;
     background: var(--accent);
     border-radius: 20px;
-
 }
 
+/* 🧱 This second flex container places main and aside side by side. */
 .container{
     width: 80%;
     margin: 20px auto;
     max-width: 1200px;
-  
     display: flex;
     align-items: center;
     min-height: 400px;
 }
 
+/* 🌐 Base page styles set the overall look. */
 body{
     background: var(--light);
     color: var(--dark);
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 🧰 Shared sizing helps students see the layout blocks clearly. */
 div, header, aside, main, footer{
-  
     min-height: 200px;
     min-width: 250px;
     background: var(--highlight);
 }
 
+/* 👣 The footer sits below the main flex layout. */
 footer{
     background: none;
     text-align: center;
@@ -80,17 +93,20 @@ footer{
     padding: 40px;
 }
 
+/* 🏷️ The dark header creates contrast for the hero area. */
 header{
     background-color: var(--dark);
     border: none;
     color: var(--light);
 }
 
+/* 🧭 Center subheadings for readability. */
 h2{
     color:var(--accent);
     text-align: center;
 }
 
+/* 🏁 Light text stands out against the dark hero background. */
 h1{
     color:var(--light);
     font-size:x-large;

@@ -1,0 +1,97 @@
+:root{
+    --color-blue: #4fb8e8;
+    --color-green: #2e7d4f;
+    --color-white: #ffffff;
+
+    --font-color: #1c3a3a;
+    --bg-color: #cdeaf7;
+    --bg-color-secondary: #f7fbfc;
+
+    --color-highlight: #ffe066;
+    --color-accent: #ff8c5a;
+}
+
+/* 🛠️ This reset makes sizing more predictable and removes default spacing. */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+
+body{
+    background:var(--bg-color);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}
+/* 🧱 The container is a grid parent. grid-template-columns: repeat(4, 1fr) creates
+   4 equal-width columns spanning the full page, and gap adds space between items
+   without needing margins on each card. */
+.container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+/* 📦 Shared card look for every grid item, regardless of how many columns it spans. */
+.card{
+    background: var(--bg-color-secondary);
+    padding: 15px;
+    border: 1px solid var(--color-green);
+}
+
+
+/* 🧭 grid-column: span 1 keeps the sidebar to 1 of the container's 4 columns. */
+.left-side{
+    grid-column: span 1;
+    background: var(--color-highlight);
+    min-height: 500px;
+}
+
+/* 📝 grid-column: span 3 takes the other 3 columns; this element is also its own
+   nested grid (3 columns + gap) so the image cards line up inside it. */
+.content{
+    grid-column: span 3;
+    min-height: 500px;
+    background: var(--color-white);
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* 🖼️ Each image card spans 1 column of the nested content grid. */
+.image-card{
+    grid-column: span 1;
+    background:var(--color-accent);
+    min-height: 200px;
+}
+
+h3{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color:var(--font-color);
+}
+/* 🏁 grid-column: span 4 stretches the header across every column, top of the page. */
+.hero{
+    grid-column: span 4;
+    color: var(--color-blue);
+    text-align: center;
+    min-height: 300px;
+
+}
+
+/* 👣 grid-column: span 4 stretches the footer across every column, bottom of the page. */
+.my_footer{
+    grid-column: span 4;
+    color: var(--color-blue);
+    text-align: center;
+    font-size:small;
+    min-height: 50px;
+}
+
+.hero h1{
+    margin-top: 30px;
+}

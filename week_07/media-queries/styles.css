@@ -1,0 +1,165 @@
+/* 🤖🤖🤖🤖🤖  AI Generated  🤖🤖🤖🤖🤖
+
+/* AI generated color palette inspired by mchenry.edu (navy & gold branding) */
+:root {
+  --mcc-navy-dark: #001f3f;
+  --mcc-navy: #002856;
+  --mcc-navy-light: #1a3f6f;
+  --mcc-gold-dark: #a8892e;
+  --mcc-gold: #c9a84c;
+  --mcc-gold-light: #e6d29a;
+  --mcc-white: #ffffff;
+  --mcc-gray-light: #f2f2f2;
+  --mcc-black: #1a1a1a;
+  --mcc-purple: #4b3190;
+}
+
+
+/* AI generated standard CSS reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* ⭐⭐⭐⭐⭐⭐   My Custom CSS    ⭐⭐⭐⭐⭐⭐⭐⭐
+
+/* 📺 media queries  */
+
+/* 📱📳📴 Cellphone layout!!!
+
+/* 📐 These are the default (mobile-first) styles; everything below stacks in 1 column until a media query widens the screen. */
+body{
+    background: var(--mcc-gold-light);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--mcc-black);
+}
+
+
+/* 🏁 grid-template-columns: 1 keeps the banner stacked on phone; the tablet query below splits it into 2 columns. */
+.banner{
+    display: grid;
+    grid-template-columns: 1;
+    gap: 20px;
+    background-color: var(--mcc-purple);
+    color:var(--mcc-white);
+    padding: 10px;
+    text-align: center;
+    margin-top: 5px;
+    border-bottom: 3px solid var(--mcc-gold-dark)
+}
+
+/* 🧱 main-content is 1 column by default; the media queries below add more columns as viewport width grows. */
+.main-content{
+    display: grid;
+    grid-template-columns: 1;
+    gap: 20px;
+    padding: 20px;
+}
+/* 📇 Shared card look across all breakpoints. */
+.card{
+    background: var(--mcc-navy);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 400px;
+    width: 100%;
+}
+
+.card header{
+    background: var(--mcc-gold-light);
+    color: var(--mcc-navy-dark);
+    text-align: center;
+    min-height: 100px;
+}
+
+.card .card-body{
+    background: var(--mcc-gray-light);
+    color:var(--mcc-black);
+    min-height: 400px;
+}
+
+
+
+
+/* Tablet and up */
+/* 📲 min-width: 768px is the tablet breakpoint; it fires once the viewport reaches this width and stays applied at wider sizes too. */
+@media (min-width: 768px) {
+    body{
+        background: var(--mcc-gold-dark);
+    }
+    .banner{
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-content{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Computer and up */
+/* 🖥️ min-width: 1024px is the desktop breakpoint; it overrides the tablet styles once the viewport is wide enough. */
+@media (min-width: 1024px) {
+    body{
+        background: var(--mcc-navy-light);
+    }
+    .banner{
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-content{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+

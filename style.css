@@ -1,24 +1,139 @@
-body{
-    background-color: darkslategrey;
-    color:bisque;
-}
-details{
-    background-color: bisque;
-    color:darkslategray;
-    width: 80%;
-    font-size: large;
-    margin: 20px;
-    min-height: 30px;
+/* 🎨 color palette inspired by mchenry.edu (navy & gold branding) */
+:root {
+  --mcc-navy-dark: #001f3f;
+  --mcc-navy: #002856;
+  --mcc-navy-light: #1a3f6f;
+  --mcc-gold-dark: #a8892e;
+  --mcc-gold: #c9a84c;
+  --mcc-gold-light: #e6d29a;
+  --mcc-white: #ffffff;
+  --mcc-gray-light: #f2f2f2;
+  --mcc-black: #1a1a1a;
+  --mcc-purple: #4b3190;
 }
 
-img{
-    float: right;
-    background: black;
+/* 🛠️ basic reset: removes default spacing and keeps sizing predictable */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 📐 default (mobile-first) styles; media queries below widen the layout */
+body {
+    background: var(--mcc-gold-light);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--mcc-black);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🏁 banner stacks in 1 column on phone; the tablet query splits it into 2 */
+.banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: var(--mcc-purple);
+    color: var(--mcc-white);
+    padding: 10px;
+    text-align: center;
+    margin-top: 5px;
+    border-bottom: 3px solid var(--mcc-gold-dark);
+}
+
+.banner h2 {
+    margin-top: 10px;
+}
+
+.banner img {
+    width: 25%;
+    display: block;
+    margin: 10px auto;
+}
+
+/* 🧱 main-content is 1 column by default; media queries add more columns as the viewport grows */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
     padding: 20px;
-    width: 15%;
+    background: var(--mcc-navy-light);
 }
 
-a{
-    color:darkslategray;
-    margin-left: 40px;
+/* 📇 shared card look across all breakpoints */
+.card {
+    background: var(--mcc-navy);
+    border: 3px solid var(--mcc-navy-dark);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    min-height: 200px;
+    width: 100%;
+    line-height: 2;
+    padding: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--mcc-navy);
+    font-size: large;
+    font-weight: bold;
+    margin: 20px;
+}
+
+/* 🔗 shows a link emoji before every card link */
+.card a::before {
+    content: "🔗 ";
+}
+
+.card header {
+    background: var(--mcc-gold-light);
+    color: var(--mcc-navy-dark);
+    text-align: center;
+    min-height: 50px;
+}
+
+/* 👆 makes the whole summary row look clickable */
+.card summary {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card .card-body {
+    background: var(--mcc-gray-light);
+    color: var(--mcc-black);
+    min-height: 200px;
+    padding: 10px;
+}
+
+/* ▶️ recolors and doubles the size of the details expand/collapse arrow */
+.card summary::marker,
+.card summary::-webkit-details-marker {
+    color: var(--mcc-white);
+    font-size: 2em;
+}
+
+/* 📲 tablet breakpoint */
+@media (min-width: 768px) {
+    .banner {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .main-content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* 🖥️ desktop breakpoint */
+@media (min-width: 1024px) {
+    .banner {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .main-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }

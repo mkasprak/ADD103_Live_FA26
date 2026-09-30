@@ -1,0 +1,66 @@
+
+/* Base Reset & Typography */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* MOBILE FIRST ARCHITECTURE (Default: 1 Column) */
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.photo-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-card p {
+    padding: 15px;
+    margin: 0;
+    font-weight: bold;
+    color: #555;
+}
+
+/* TABLET - 2 Columns */
+@media (min-width: 600px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* LAPTOP/DESKTOP - 3 Columns */
+@media (min-width: 900px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* WIDE SCREEN DESKTOP - 4 Columns */
+@media (min-width: 1200px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

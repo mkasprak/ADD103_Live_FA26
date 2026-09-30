@@ -1,0 +1,96 @@
+/* Color theme created by AI, inspired by the red kayak at sunset. */
+:root {
+  --color-water: #173b50;
+  --color-deep-water: #102b3b;
+  --color-sky: #a9c9d4;
+  --color-kayak: #a94f4c;
+  --color-kayak-dark: #793b3b;
+  --color-sunset: #f2d9b5;
+  --color-foam: #f4f3ed;
+  --color-text: #20313a;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+  background-color: var(--color-sky);
+  color: var(--color-text);
+  font-family:arial, helvetica, sans-serif;
+}
+  
+.btn{
+    padding: 15px 20px;
+    background: var(--color-kayak-dark);
+    color:var(--color-foam);
+    text-decoration: none;
+    border-radius: 20px;
+    border: 2px solid var(--color-kayak-dark);
+    font-size:x-large;
+    min-width: 150px;
+    display:block;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.btn:hover, .current{
+  background: var(--color-foam);
+  color: var(--color-kayak-dark);
+}
+header {
+  min-height: 200px;
+  background: var(--color-deep-water);
+  margin-top: 5px;
+  color: var(--color-foam);
+  padding-top: 15px;
+  
+}
+
+footer{
+  min-height: 60px;
+  background: var(--color-deep-water);
+  margin-top: 5px;
+  color: var(--color-foam);
+  padding-top: 15px;
+  text-align:center;
+  padding-top: 20px;
+}
+
+h1 {
+  text-align:center;
+  margin: 30px;
+  font-size:xxx-large;
+  
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  align-items: center;
+  gap: 30px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  
+}
+
+nav div{
+  max-width: 20%;
+  min-width: 200px;
+  line-height: 2;
+  margin: 0px auto;
+}
+
+main{
+  min-height:800px;
+}
+
+img{
+  width: 40%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--color-deep-water);
+  margin: 20px;
+}

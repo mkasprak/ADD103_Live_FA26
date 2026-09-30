@@ -96,6 +96,8 @@ body {
     color: var(--mcc-navy-dark);
     text-align: center;
     min-height: 50px;
+    font-weight: bold;
+    padding-top: 10px;
 }
 
 /* 👆 makes the whole summary row look clickable */

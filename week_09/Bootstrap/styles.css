@@ -1,0 +1,53 @@
+:root {
+    --coast-sky: #F6F3EB;
+    --coast-cloud: #E8E0D1;
+    --coast-mist: #C6D0C8;
+    --coast-sea-glass: #8FA5A2;
+    --coast-ocean: #526D6A;
+    --coast-grass-light: #78904B;
+    --coast-grass: #45632F;
+    --coast-evergreen: #263A25;
+    --coast-sandstone: #A58C69;
+    --coast-stone: #77766D;
+    --coast-slate: #4B4B43;
+    --coast-charcoal: #292923;
+
+    --page-background: var(--coast-sky);
+    --page-text: var(--coast-slate);
+    --page-heading: var(--coast-evergreen);
+}
+
+body {
+    background-color: var(--coast-mist);
+    color: var(--page-text);
+}
+
+.container{
+    background: var(--coast-evergreen);
+    color:var(--coast-cloud);
+    h1{
+        color: var(--coast-cloud);
+        text-align: center;
+    }
+}
+
+.container-fluid{
+    background: var(--coast-grass);
+    color:var(--coast-sky);
+    h1{
+        color: var(--coast-mist);
+        text-align: center;
+    }
+}
+
+.col{
+    border: 1px solid yellow;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--page-heading);
+}

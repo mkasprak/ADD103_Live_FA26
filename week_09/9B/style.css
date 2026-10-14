@@ -1,0 +1,86 @@
+/* Color Palette (AI-inspired from puppy3 photo: dark greens + warm sunset accents) */
+:root {
+  color-scheme: dark;
+
+  --clr-bg: #0f1213;
+  --clr-surface: #17201c;
+  --clr-surface-2: #22302a;
+
+  --clr-text: #f2f0ee;
+  --clr-muted: #bdb9b4;
+
+  --clr-primary: #3f7a55;
+  --clr-primary-2: #6ea06b;
+
+  --clr-accent: #d39a76;
+  --clr-accent-2: #f1d2ba;
+
+  --clr-border: rgba(242, 240, 238, 0.14);
+  --shadow-1: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+/* Base Page Styles */
+body{
+    background: var(--clr-bg);
+
+}
+
+/* Main Content Area */
+main{
+    min-height: 600px;
+    background-color: var(--clr-surface-2);
+    margin: 20px auto;
+    min-width: 500px;
+    padding-bottom: 10px;
+    color: var(--clr-accent-2);
+    h2,h3{
+        text-align: center;
+    }
+}
+
+/* Navigation */
+nav{
+    max-width: 90%;
+    margin: 20px auto;
+
+    /* Nav link color (note: this targets elements with class "my-link") */
+    .my-link{
+        color: var(--clr-accent);
+    }
+
+    /* Hover state */
+    .my-link:hover{
+        color: var(--clr-accent-2);
+    }
+}
+
+/* Layout Spacing */
+.row{
+    margin-top: 15px;
+}
+
+/* Header + Footer */
+header, footer{
+    background-color: var(--clr-surface);
+    min-height: 100px;
+
+    h1, h3 {
+        color:var(--clr-accent);
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+}
+
+/* Cards */
+.card{
+    margin-bottom: 10px;
+
+    /* Card text */
+    p{
+        text-align: center;
+        font-weight: bold;
+        color: var(--clr-bg);
+    }
+}

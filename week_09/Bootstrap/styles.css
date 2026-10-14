@@ -1,3 +1,4 @@
+/* Color Palette (coastal greens + neutrals) */
 :root {
     --coast-sky: #F6F3EB;
     --coast-cloud: #E8E0D1;
@@ -17,11 +18,13 @@
     --page-heading: var(--coast-evergreen);
 }
 
+/* Base Page Styles */
 body {
     background-color: var(--coast-mist);
     color: var(--page-text);
 }
 
+/* Container Demos */
 .container{
     background: var(--coast-evergreen);
     color:var(--coast-cloud);
@@ -40,9 +43,12 @@ body {
     }
 }
 
+/* Grid Column Debug Border */
 .col{
     border: 1px solid yellow;
 }
+
+/* Headings */
 h1,
 h2,
 h3,

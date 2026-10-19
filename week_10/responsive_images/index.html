@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Images: &lt;picture&gt; demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>&lt;picture&gt; element demo</h1>
+      <p class="hint">Resize the browser window to switch between the wide photo and the close-up.</p>
+
+      <figure class="photo">
+        <picture>
+          <source media="(max-width: 699px)" srcset="images/lookout_closeup.webp" type="image/webp" />
+          <source media="(min-width: 700px)" srcset="images/lookout.webp" type="image/webp" />
+          <img
+            src="images/lookout.webp"
+            alt="A lookout point with a sweeping view of the landscape."
+            loading="lazy"
+          />
+        </picture>
+        <figcaption>
+          Uses <code>&lt;picture&gt;</code> with <code>media</code> to choose between
+          <code>lookout_closeup.webp</code> (small screens) and <code>lookout.webp</code> (large screens).
+        </figcaption>
+      </figure>
+    </main>
+  </body>
+</html>

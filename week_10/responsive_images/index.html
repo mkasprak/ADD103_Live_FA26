@@ -9,21 +9,95 @@
   <body>
     <main class="page">
       <h1>&lt;picture&gt; element demo</h1>
-      <p class="hint">Resize the browser window to switch between the wide photo and the close-up.</p>
-
+      <p class="hint">
+        Responsive images = the browser downloads the “right” image file for
+        the screen size (and display density).
+      </p>
+      <!-- https://www.w3schools.com/tags/tag_picture.asp code based on w3schools -->
       <figure class="photo">
+        <!-- 🖼 <picture> = art direction (different crops/compositions for different screens). -->
+        <!-- 📱💻🖥 The browser checks <source> tags top-to-bottom and picks the FIRST one whose media query matches. -->
+        <!-- 🧠 The <img> is the fallback AND the place we put alt text (for accessibility). -->
         <picture>
-          <source media="(max-width: 699px)" srcset="images/lookout_closeup.webp" type="image/webp" />
-          <source media="(min-width: 700px)" srcset="images/lookout.webp" type="image/webp" />
+          <!-- 📱 Phone/small screens: use the close-up file -->
+          <source
+            media="(max-width: 699px)"
+            srcset="images/lookout_closeup.webp"
+            type="image/webp"
+          />
+          <!-- 🖥 Desktop/large screens: use the wide landscape file -->
+          <source
+            media="(min-width: 700px)"
+            srcset="images/lookout.webp"
+            type="image/webp"
+          />
           <img
             src="images/lookout.webp"
             alt="A lookout point with a sweeping view of the landscape."
             loading="lazy"
+            decoding="async"
           />
         </picture>
         <figcaption>
-          Uses <code>&lt;picture&gt;</code> with <code>media</code> to choose between
-          <code>lookout_closeup.webp</code> (small screens) and <code>lookout.webp</code> (large screens).
+          Uses <code>&lt;picture&gt;</code> with <code>media</code> to choose
+          between <code>lookout_closeup.webp</code> (small screens) and
+          <code>lookout.webp</code> (large screens).
+        </figcaption>
+      </figure>
+      <figure class="photo">
+        <!-- 🖼 Same idea: <picture> lets us swap images based on screen size (art direction). -->
+        <picture>
+          <source
+            media="(max-width: 699px)"
+            srcset="images/waterfall_1_close.webp"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 700px)"
+            srcset="images/waterfall_1.webp"
+            type="image/webp"
+          />
+          <img
+            src="images/waterfall_1.webp"
+            alt="Sparky and Dot, rubber ducks, looking at a waterfall."
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <figcaption>
+          Uses <code>&lt;picture&gt;</code> with <code>media</code> to choose
+          between <code>waterfall_1_close.webp</code> (small screens) and
+          <code>waterfall_1.webp</code> (large screens).
+        </figcaption>
+      </figure>
+
+      <h2 class="demo-title"><code>srcset</code> + <code>sizes</code> (resolution switching)</h2>
+      <p class="hint">
+        Same photo, exported at multiple widths. The browser chooses the
+        smallest file that still looks sharp.
+      </p>
+
+      <figure class="photo">
+        <!-- 🖼 srcset = “same image, multiple file sizes” (NOT different crops). -->
+        <!-- 📐 The “w” numbers are the image widths in pixels (480w = a 480px-wide file). -->
+        <!-- 📏 sizes tells the browser how wide the image will DISPLAY in the layout, so it can pick the best srcset candidate. -->
+        <!-- 📲 On small screens we let it be 100vw (full viewport width). On bigger screens it caps at the page width (60rem). -->
+        <img
+          src="images/waterfall_1-960.jpg"
+          srcset="
+            images/waterfall_1-480.jpg 480w,
+            images/waterfall_1-960.jpg 960w,
+            images/waterfall_1-1440.jpg 1440w
+          "
+          sizes="(max-width: 699px) 100vw, 60rem"
+          alt="A waterfall cascading down rock steps into a pool."
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>
+          Uses <code>srcset</code> + <code>sizes</code> so the browser can
+          download a smaller file on phones and a sharper file on larger
+          screens.
         </figcaption>
       </figure>
     </main>

@@ -1,0 +1,58 @@
+/**
+ * ----------------------------------------
+ * animation scale-down-center
+ * ----------------------------------------
+ */
+
+/* Page setup: full-height, centered text, and a simple background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: ivory;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Text styling: big + green */
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 10vw, 6rem);
+  color: #0a7d00;
+  letter-spacing: 0.02em;
+}
+
+/* Animation helper class: apply the keyframes to any element */
+.scale-down-center {
+  -webkit-animation: scale-down-center 1s ease-in-out infinite alternate both;
+          animation: scale-down-center 1s ease-in-out infinite alternate both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scale-down-center {
+    /* Accessibility: respect users who prefer less motion */
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@-webkit-keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+@keyframes scale-down-center {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}

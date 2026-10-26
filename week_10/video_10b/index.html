@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video + Audio Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--
+      Requirement 3: Silent, autoplaying background video header (a simple "media hero").
+
+      Key ideas:
+      - autoplay: starts automatically
+      - muted: REQUIRED for autoplay in most browsers (also makes it "silent")
+      - loop: keeps playing
+      - playsinline: helps iPhones play the video inline (not full-screen)
+      - We use <source> so you can swap to different formats later if needed.
+    -->
+    <header class="hero">
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-label="Background video header"
+      >
+        <source src="208815_medium.mp4" type="video/mp4" />
+        <!-- Fallback text for very old browsers -->
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Overlay content sits "on top" of the video -->
+      <div class="hero__content">
+        <h1>Media Demo</h1>
+        <p>Background video (muted + autoplay) and an audio player.</p>
+      </div>
+    </header>
+
+    <main class="content">
+      <!--
+        Requirement 1: Embed an audio track with controls.
+
+        Common options:
+        - controls: shows play/pause, volume, timeline, etc.
+        - loop: repeats the audio
+        - autoplay: starts automatically (often blocked unless muted/allowed by user)
+        - preload: "metadata" loads duration info without downloading everything
+      -->
+      <h2>Audio Player</h2>
+      <audio controls preload="metadata">
+        <source
+          src="sound4stock-halloween-spooky-music-620458.mp3"
+          type="audio/mpeg"
+        />
+        <!-- Fallback text for very old browsers -->
+        Your browser does not support the audio tag.
+      </audio>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/gIb04xIKaxo?si=k3Z1885nt5-wF7pl"
+        title="YouTube video player"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </main>
+  </body>
+</html>

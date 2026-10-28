@@ -9,6 +9,12 @@
   <body>
     <div class="container">
       <h1>JavaScript Image Change</h1>
+      <!--
+        How this works:
+        - On any image that has an `onclick` attribute, clicking it runs JavaScript.
+        - We call `change(...)` (a function defined in `script.js`) and pass in the image file path.
+        - That function finds the big image with `id="large"` and swaps its `src` to the path you clicked.
+      -->
       <!-- (div>img)*5 -->
       <div class="grid-container">
         <div><img src="images/duckbacca.png" alt="Duck Bacca" /></div>
@@ -26,10 +32,12 @@
         </div>
       </div>
       <div>
+        <!-- The "target" image that JavaScript updates when you click a thumbnail -->
         <img src="images/duckbacca.png" id="large" />
       </div>
     </div>
 
+    <!-- Load our JavaScript after the HTML so the elements above already exist in the page -->
     <script src="script.js"></script>
   </body>
 </html>

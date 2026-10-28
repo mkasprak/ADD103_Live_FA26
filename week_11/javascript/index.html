@@ -17,7 +17,13 @@
       -->
       <!-- (div>img)*5 -->
       <div class="grid-container">
-        <div><img src="images/duckbacca.png" alt="Duck Bacca" /></div>
+        <div>
+          <img
+            src="images/duckbacca.png"
+            alt="Duck Bacca"
+            onclick="change('images/duckbacca.png')"
+          />
+        </div>
         <div>
           <img
             src="images/duckstar.png"
@@ -33,7 +39,10 @@
       </div>
       <div>
         <!-- The "target" image that JavaScript updates when you click a thumbnail -->
-        <img src="images/duckbacca.png" id="large" />
+        <figure>
+          <figcaption id="large-caption">Duckbacca</figcaption>
+          <img src="images/duckbacca.png" id="large" />
+        </figure>
       </div>
     </div>
 
